@@ -2,3 +2,8 @@
 .mbed
 projectfiles
 *.py*
+BUILD
+videoplayer
+unigraphic
+sdio-driver
+mbed-os
