@@ -138,14 +138,15 @@ int main() {
     }
 //    for (const string& video_file : video_files )
 //    {
+        uint32_t fps=16;
         t.reset();
         File file(&fileSystem, "NP_4100-6200_16fps.craw");
-        int res = video_player.play(file, 21);
+        int res = video_player.play(file, fps);
         time = duration_cast<seconds>(t.elapsed_time()).count();
         myLCD.locate(2, 70);
         myLCD.set_font((unsigned char *)Terminal6x8);
-        myLCD.printf("Video takes %llu seconds \n", time);
-        printf("Video takes %llu seconds \n", time);
+        myLCD.printf("%u FPS video takes %llu seconds \n", fps, time);
+        printf("%u FPS video takes %llu seconds \n", fps, time);
         ThisThread::sleep_for(10s);
 //    }
 
