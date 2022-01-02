@@ -29,8 +29,11 @@ BlockDevice *blockDevice = BlockDevice::get_default_instance();
 
 FATFileSystem fileSystem("fs");
 
-DigitalOut selectSPI(D4, true); // Select SPI iterface on LCD
-ILI9341V myLCD(SPI_DMA_, 10000000, D11, D12, D13, D10, D8, D7, "myLCD");
+//DigitalOut selectSPI(D4, true); // Select SPI iterface on LCD
+//ILI9341V myLCD(SPI_DMA_, 10000000, D11, D12, D13, D10, D8, D7, "myLCD");
+ILI9341V myLCD(SPI_DMA_, 10000000, D11, D12, D13, D62, D63, D64, "myLCD");
+//ILI9341V myLCD(SPI_16, 10000000, D11, D12, D13, D62, D63, D64, "myLCD");
+//ILI9341V myLCD(SPI_8, 10000000, D11, D12, D13, D62, D63, D64, "myLCD");
 Timer t;
 
 
